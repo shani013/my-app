@@ -8,12 +8,21 @@ function App() {
   //using state variable i have set light mode and then cahange it using function
   const [mode, setMode] = useState('light');
   const modeChange = () => {
-    setMode(mode === 'dark' ? 'light' : 'dark');
+    if (mode === 'light') {
+      setMode('dark');
+      document.body.style.backgroundColor='grey';
+
+    }
+    else {
+      setMode('light');
+      document.body.style.backgroundColor='#ffffff';
+
+    }
   }
   return (
     <>
       <Navbar name='Monkey King' mode={mode} modeChange={modeChange} />
-      <TextArea heading='Enter Text to Analyze '/>
+      <TextArea heading='Enter Text to Analyze' mode={mode}/>
     </>
   );
 }

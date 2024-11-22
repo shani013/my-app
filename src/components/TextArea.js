@@ -41,8 +41,8 @@ export default function TextArea(props) {
     // using useState i can change the text of input field(textArea)
     const [text,setText]=useState('');
     return (
-      <div className="container">
-            <div className="mb-3 " style={myStyle}>
+      <div className="container mt-3">
+            <div className='mb-3' style={myStyle} >
                 <label htmlFor="textarea" className="form-label" style={myStyle}>{props.heading}</label>
                 <textarea className="form-control" name='textarea' id="textarea" style={myStyle}  value={text} onChange={handleonChange} rows="8"></textarea>
             </div>
