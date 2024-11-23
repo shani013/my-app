@@ -1,5 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
+import About from './components/about';
+
 import TextArea from './components/TextArea';
 import React, { useState } from 'react';
 
@@ -22,7 +24,8 @@ function App() {
   return (
     <>
       <Navbar name='Monkey King' mode={mode} modeChange={modeChange} />
-      <TextArea heading='Enter Text to Analyze' mode={mode}/>
+      <TextArea heading='Enter Text to Analyze' mode={mode} />
+      <About/>
     </>
   );
 }

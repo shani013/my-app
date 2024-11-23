@@ -20,6 +20,9 @@ export default function Navbar(props) {
                                 <a className="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
                             <li className="nav-item">
+                                <a className="nav-link active" aria-current="page" href="about.js">About</a>
+                            </li>
+                            <li className="nav-item">
                                 <div class="btn-group">
                                     <a type="button" class="nav-link  dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                                         Themes
