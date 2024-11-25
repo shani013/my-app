@@ -1,9 +1,14 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import About from './components/about';
-
 import TextArea from './components/TextArea';
 import React, { useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 
 
 function App() {
@@ -23,9 +28,14 @@ function App() {
   }
   return (
     <>
-      <Navbar name='Monkey King' mode={mode} modeChange={modeChange} />
-      <TextArea heading='Enter Text to Analyze' mode={mode} />
-      <About/>
+      <Router>
+          <Navbar name='Monkey King' mode={mode} modeChange={modeChange} />
+            <Routes>
+                {/* All children must be Route elements */}
+                <Route path="/" element={<TextArea heading='Enter Text to Analyze' mode={mode} />} />
+                <Route path="/about" element={<About/>} />
+            </Routes>
+      </Router>
     </>
   );
 }

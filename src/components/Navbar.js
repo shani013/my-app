@@ -1,4 +1,6 @@
-import React , { useState } from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
+
 
 export default function Navbar(props) {
     const selectTheme = (color) => {
@@ -17,10 +19,10 @@ export default function Navbar(props) {
                     <div className="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="about.js">About</a>
+                                <Link className="nav-link active" aria-current="page" to="about.js">About</Link>
                             </li>
                             <li className="nav-item">
                                 <div class="btn-group">
