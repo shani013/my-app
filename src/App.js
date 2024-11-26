@@ -1,7 +1,9 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import About from './components/about';
+import Contact from './components/Contact';
 import TextArea from './components/TextArea';
+import About from './components/About';
+import NotFound from './components/NotFound';
 import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
@@ -27,16 +29,15 @@ function App() {
     }
   }
   return (
-    <>
       <Router>
           <Navbar name='Monkey King' mode={mode} modeChange={modeChange} />
-            <Routes>
-                {/* All children must be Route elements */}
-                <Route path="/" element={<TextArea heading='Enter Text to Analyze' mode={mode} />} />
-                <Route path="/about" element={<About/>} />
-            </Routes>
+          <Routes>
+            <Route path="/" element={<TextArea heading='Enter Text to Analyze' mode={mode} />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+        </Routes>
       </Router>
-    </>
   );
 }
 
